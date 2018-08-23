@@ -18,14 +18,19 @@ mvn build package
 ```
 
 ### Run from Jar
+
 `java -jar ./complete/target/gs-spring-boot-0.1.0.jar`
+
 you should be able to navigate to localhost:8080 and see something
 
 ### Build a Docker Container
 Copy the attached [Dockerfile](Dockerfile) to the complete folder
 `sudo docker build . -t testapp`
+
 confirm it works
+
 `sudo docker run -d --rm -p 8080:8080`
+
 you should be able to navigate to localhost:8080 and see something
 ## 2. Push Artifacts to Repo (Nexus)
 ### create Repo

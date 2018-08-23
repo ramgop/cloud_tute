@@ -1,0 +1,4 @@
+* Setup Springboot app
+* Store app in Artifact Repo
+* Dockerise app
+* Kubernetes

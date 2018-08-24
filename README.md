@@ -38,11 +38,29 @@ mkdir nexus-data
 sudo chown -R 200 nexus-data
 sudo docker run -d --rm -p 8081:8081 --name nexus -v /some/dir/nexus-data:/nexus-data sonatype/nexus3
 ```
-### Go to Repo and configure a docker and maven repository
+### TODO Go to Repo and configure a docker and maven repository
 localhost:8081
 admin/admin123
 
-### push Docker Image
-### push Java JAR
+### TODO push Docker Image
+### TODO push Java JAR
+
+## 3. Install and setup Kubernetes
+### install kubectl
+See [Kubernetes Documentation](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl) for how.
+For Mac:
+
+`brew install kubernetes-cli`
+### install minikube (light dev kubeernetes vm instance)
+see [Minikube github page](https://github.com/kubernetes/minikube)
+For Mac:
+
+`brew install minikube`
+
+## start minikube
+```
+minikube start
+```
+
 
 

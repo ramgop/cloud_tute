@@ -6,32 +6,10 @@ Ok so before we start I want to do this keeping JARs and Docker Containers as ar
 * Docker
 
 ## 1. Create an application
-The purpose of this is to create the environment so the actual App is pretty trivial. That said we need to deploy something.
 
-Downlad the [Spring Guides](https://github.com/spring-guides/gs-spring-boot) repo. 
 
-### Build the code in the completed folder as JAR
+The purpose of this is to create the environment so the actual App is pretty trivial. That said we need to deploy something. So see the [Applications](applications/README.md) page for details
 
-```
-cd complete
-mvn build package
-```
-
-### Run from Jar
-
-`java -jar ./complete/target/gs-spring-boot-0.1.0.jar`
-
-you should be able to navigate to localhost:8080 and see something
-
-### Build a Docker Container
-Copy the attached [Dockerfile](Dockerfile) to the complete folder
-`sudo docker build . -t testapp`
-
-confirm it works
-
-`sudo docker run -d --rm -p 8080:8080`
-
-you should be able to navigate to localhost:8080 and see something
 ## 2. Push Artifacts to Repo (Nexus)
 ### create Repo
 for this Dev setup I'm using Nexus for both JAR and Docker Image.

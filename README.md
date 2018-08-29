@@ -1,12 +1,13 @@
 # Created an Containerised Environment 
+This Repo is intended to show the basic steps to make a cloud deployable system.
+
 Ok so before we start I want to do this keeping JARs and Docker Containers as artifacts to evaluate both ways.
 ## Pre-requisites
-* Java
-* maven
+* Java (if creating JAR)
+* maven (if creating JAR)
 * Docker
 
 ## 1. Create an application
-
 
 The purpose of this is to create the environment so the actual App is pretty trivial. That said we need to deploy something. So see the [Applications](applications/README.md) page for details
 
@@ -29,21 +30,33 @@ admin/admin123
 ### TODO push Java JAR
 
 ## 3. Install and setup Kubernetes
+
 ### install kubectl
 See [Kubernetes Documentation](https://kubernetes.io/docs/tasks/tools/install-kubectl/#install-kubectl) for how.
 For Mac:
 
 `brew install kubernetes-cli`
+
 ### install minikube (light dev kubeernetes vm instance)
 see [Minikube github page](https://github.com/kubernetes/minikube)
 For Mac:
 
 `brew install minikube`
 
-## start minikube
+### start minikube
 ```
 minikube start
+# allow use of minikube's repo
+eval $(minikube docker-env)
+```
+### How to Stop minikube
+```
+minikube stop
+minikube delete
 ```
 
 
+## Basic Kubernetes Deployments
+
+See [Simple Deployments](kube_basic_actions/simple_deployments.md) for some simple Deployments.
 

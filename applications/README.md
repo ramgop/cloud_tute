@@ -15,20 +15,19 @@ create a container
 
 ```
 cd webtest
-sudo docker build . -t webtest
+sudo docker build . -t webtestimage
 ```
 
 Mount a folder containing an [index.html](webtest/index.html) file.
 
-`sudo docker run --name nginx-testmount -v /path/to/cloud_system/method/applications/webtest:/usr/share/nginx/html:ro -p 8089:80 webtest`
+`sudo docker run --name nginx-testmount -v /path/to/cloud_system/method/applications/webtest:/usr/share/nginx/html:ro -p 8089:80 webtestimage`
 
 
 ## Download built Springboot Application
 There is a [Spring Guides](https://github.com/spring-guides/gs-spring-boot) repo which teaches you how to make an app but it also has a completed source Repo.
 
-I have created a quick [shell script](springbootest/create_container.sh) to build the JAR and get setup ready to build Docker Container.
+I have created a quick [shell script](springbootest/create_container.sh) to pull a git repo and copy a simple Docker file ready to build..
 ### Java Archive
-This is done in shell script mentioned above, so ignore and use the script if you aren't interested
 
 #### Build the code as JAR
 
